@@ -1,0 +1,12 @@
+[Unit]
+Description=Qwen3-1.7B Embedding + Router Model
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/opt/llama.cpp/build/bin/llama-server   -m /opt/models/Qwen3-1.7B-Q8_0.gguf   --ctx-size 4096   --n-gpu-layers 99   --jinja   --embeddings   --pooling mean   --host 0.0.0.0   --port 8081   --parallel 2 --reasoning off --batch-size 2048 --ubatch-size 2048
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

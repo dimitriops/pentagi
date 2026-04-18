@@ -1,0 +1,151 @@
+simple:
+  model: qwen3-coder-30b
+  temperature: 0.5
+  top_p: 0.8
+  n: 1
+  max_tokens: 2000
+  extra_body:
+    chat_template_kwargs:
+      enable_thinking: false
+  price:
+    input: 0.0
+    output: 0.0
+
+simple_json:
+  model: qwen3-coder-30b
+  temperature: 0.3
+  top_p: 0.7
+  n: 1
+  max_tokens: 2000
+  json: true
+  extra_body:
+    chat_template_kwargs:
+      enable_thinking: false
+  price:
+    input: 0.0
+    output: 0.0
+
+primary_agent:
+  model: deepseek-chat
+  temperature: 0.7
+  top_p: 0.8
+  n: 1
+  max_tokens: 8000
+  price:
+    input: 0.27
+    output: 1.10
+
+A:
+  model: deepseek-chat
+  temperature: 0.7
+  top_p: 0.8
+  n: 1
+  max_tokens: 8000
+  price:
+    input: 0.27
+    output: 1.10
+
+adviser:
+  model: deepseek-chat
+  temperature: 0.7
+  top_p: 0.8
+  n: 1
+  max_tokens: 6000
+  price:
+    input: 0.27
+    output: 1.10
+
+reflector:
+  model: deepseek-chat
+  temperature: 0.5
+  top_p: 0.7
+  n: 1
+  max_tokens: 4000
+  price:
+    input: 0.27
+    output: 1.10
+
+generator:
+  model: deepseek-chat
+  temperature: 0.7
+  top_p: 0.8
+  n: 1
+  max_tokens: 8000
+  price:
+    input: 0.27
+    output: 1.10
+
+refiner:
+  model: deepseek-chat
+  temperature: 0.5
+  top_p: 0.7
+  n: 1
+  max_tokens: 8000
+  price:
+    input: 0.27
+    output: 1.10
+
+searcher:
+  model: qwen3-coder-30b
+  temperature: 0.7
+  top_p: 0.8
+  n: 1
+  max_tokens: 4000
+  extra_body:
+    chat_template_kwargs:
+      enable_thinking: false
+  price:
+    input: 0.0
+    output: 0.0
+
+enricher:
+  model: qwen3-coder-30b
+  temperature: 0.7
+  top_p: 0.8
+  n: 1
+  max_tokens: 4000
+  extra_body:
+    chat_template_kwargs:
+      enable_thinking: false
+  price:
+    input: 0.0
+    output: 0.0
+
+coder:
+  model: qwen3-coder-30b
+  temperature: 0.5
+  top_p: 0.8
+  n: 1
+  max_tokens: 16384
+  extra_body:
+    chat_template_kwargs:
+      enable_thinking: false
+  price:
+    input: 0.0
+    output: 0.0
+
+installer:
+  model: qwen3-coder-30b
+  temperature: 0.5
+  top_p: 0.8
+  n: 1
+  max_tokens: 8192
+  extra_body:
+    chat_template_kwargs:
+      enable_thinking: false
+  price:
+    input: 0.0
+    output: 0.0
+
+pentester:
+  model: qwen3-coder-30b
+  temperature: 0.5
+  top_p: 0.8
+  n: 1
+  max_tokens: 8192
+  extra_body:
+    chat_template_kwargs:
+      enable_thinking: false
+  price:
+    input: 0.0
+    output: 0.0

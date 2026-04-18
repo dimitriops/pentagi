@@ -1,0 +1,16 @@
+[Unit]
+Description=LLM Router — Hybrid DeepSeek + Qwen
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/python3 /opt/llm-router.py
+Environment=DEEPSEEK_API_KEY=YOUR_DEEPSEEK_API_KEY
+Environment=QWEN_URL=http://localhost:8080
+Environment=DEEPSEEK_URL=https://api.deepseek.com
+Environment=ROUTER_PORT=8090
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

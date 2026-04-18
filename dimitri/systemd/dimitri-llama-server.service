@@ -1,0 +1,12 @@
+[Unit]
+Description=llama.cpp Server with Qwen3-Coder-30B-A3B
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/opt/llama.cpp/build/bin/llama-server   -m /opt/models/Qwen3-Coder-30B-A3B-abliterated-Q4_K_S.gguf   --ctx-size 65536   --n-gpu-layers 25   -ot ".ffn_.*_exps.=CPU"   --jinja   --host 0.0.0.0   --port 8080   --parallel 2 --reasoning off
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

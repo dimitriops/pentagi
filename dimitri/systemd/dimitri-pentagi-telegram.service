@@ -1,0 +1,15 @@
+[Unit]
+Description=PentAGI Telegram Bot
+After=network.target docker.service
+
+[Service]
+Type=simple
+WorkingDirectory=/opt/pentagi-telegram
+ExecStart=/opt/pentagi-telegram/start.sh
+Restart=on-failure
+RestartSec=5
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target
